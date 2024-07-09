@@ -114,7 +114,7 @@ body{
       -webkit-backdrop-filter: blur(10px);
       border-radius: 4px;
       border: 1px solid rgba(255, 255,255, 0.18);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+      box-shadow: 0 0px 0px rgba(0, 0, 0, 0.37);
       padding: 20px;
       z-index: 1;
   }
@@ -444,11 +444,11 @@ p {
 .row1 {
   
   display: block;
-  height: 85vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 40px;
+  padding-top: 40px 0px;
   background-color: #EFF3F7;
 }
 
@@ -1481,10 +1481,14 @@ div.item {
 }
 /* our works ends */
 /*contact us starts */
+#contact_us{
+  height: 120vh;
+}
 .contact-form-container {
   background: #EFF3F7;
-  font-family: 'Lato', sans-serif;
-  margin-top: 40px;
+  
+  height: 800px;
+  
 }
 
 .contact-us {
@@ -1529,10 +1533,10 @@ div.item {
 }
 
 .social-bar {
-  position: absolute;
-  bottom: 30px;
+  position: relative;
+  bottom: 100px;
   z-index: 1;
-  width: 250px;
+  width: 100px;
 
   .card2 {
     width: fit-content;
@@ -1826,14 +1830,14 @@ form {
 .contact-form {
   padding-bottom: 20px;
   border-color: #000;
-  margin-bottom: 40px;
+  
 }
 
 /* Layout Stuff */
 .contact-container {
   background: #fff;
-  height: 115vh;
-  width: 100vw;
+  height: 100vh;
+  width: 99.3vw;
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1845,6 +1849,7 @@ form {
 .contact-form-container {
   
   width: 800px;
+  height: 630px;;
   display: grid;
   grid-template-columns: 0.8fr 0.8fr 0.8fr 0.8fr;
   grid-template-rows: 0.5fr 0.5fr 2fr;
@@ -1901,7 +1906,10 @@ form {
       "address email phone" 
       "contact-form contact-form contact-form";
   }
-
+.email, .phone{
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+}
 
 .address, .email, .phone {
   text-align: center;
@@ -1919,9 +1927,18 @@ form {
     margin-bottom: 20px;
   }
 }
+
+.location{
+  margin-left: 40%;
+  margin-bottom: 25%;
+  width: 35.8px;
+  height: 35.8px;
+  position: relative;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
   .contact-form-container {
-    background: #EFF3F7;
-    font-family: 'Lato', sans-serif;
+    background: #EFF3F7
     margin-top: 20px;
   }
   .header {
@@ -2042,6 +2059,90 @@ form {
     }
     
   }
+  
+.social-bar {
+  display: flex;
+  align-items: end;
+  justify-content: flex-start ;
+  position: relative;
+  z-index:1     ;
+  width: 100px;
+
+  .card2 {
+    width: fit-content;
+    height: fit-content;
+    background-color: #CD97A5;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 20px 40px 20px;
+    gap: 20px;
+    
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 34px;
+    height: 34px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #ed4490;
+    transition-duration: .3s;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #c2eeff;
+    transition-duration: .3s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #43e748;
+    transition-duration: .3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(0, 0, 0);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+}
   
 }
 
