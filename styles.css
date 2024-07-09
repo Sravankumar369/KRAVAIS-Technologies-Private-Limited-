@@ -1,15 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nabla&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @font-face {
   font-family: military font;
   src: url(military_font_7.ttf);
 }
-body {
+body{
     margin: 0;
     padding: 0;
     font-family: "Josefin Sans", sans-serif;
     background-color: #ffffff; /* Set background color */
     color: #333; /* Set text color */
+}
+.wrapper1,
+.content2 {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.content2 {
+  overflow-x: hidden;
 }
 /* First page starts */
 .main_container {
@@ -187,6 +198,7 @@ body {
     }
       .mobile-menu {
         margin-top: 10px;
+        margin-left: 5px;
         display: none;
         flex-direction: row;
         gap: 5px;
@@ -213,10 +225,10 @@ body {
  
   
   .content1 {
-      max-height: 600px;
-      display: grid;
+    margin-top: 150px;
+      max-height: 500px;
       grid-template-columns: 1fr;
-      gap: 20px;
+      gap: 40px;
       width: 100%;
       
       
@@ -250,93 +262,22 @@ body {
       transform: translate(-50%, -50%);
       color: white;
       text-align: center;
-      #button2 {
-        --border-radius: 15px;
-        --border-width: 4px;
-        border-radius: 1em;
-        cursor: pointer;
-        appearance: none;
-        position: relative;
-        padding: 1em 2em;
-        border: 0;
-        background-color: #212121;
-        font-family: "Roboto", Arial, "Segoe UI", sans-serif;
-        font-size: 18px;
-        font-weight: 500;
-        color: #fff;
-        z-index: 2;
-       }
-       
-       #button2::after {
-        --m-i: linear-gradient(#000, #000);
-        --m-o: content-box, padding-box;
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        padding: var(--border-width);
-        border-radius: var(--border-radius);
-        background-image: conic-gradient(
-           #488cfb,
-           #29dbbc,
-           #ddf505,
-           #ff9f0e,
-           #e440bb,
-           #655adc,
-           #488cfb
-         );
-        -webkit-mask-image: var(--m-i), var(--m-i);
-        mask-image: var(--m-i), var(--m-i);
-        -webkit-mask-origin: var(--m-o);
-        mask-origin: var(--m-o);
-        -webkit-mask-clip: var(--m-o);
-        mask-composite: exclude;
-        -webkit-mask-composite: destination-out;
-        filter: hue-rotate(0);
-        animation: rotate-hue linear 500ms infinite;
-        animation-play-state: paused;
-       }
-       
-       #button2:hover::after {
-        animation-play-state: running;
-       }
-       
-       @keyframes rotate-hue {
-        to {
-         filter: hue-rotate(1turn);
-        }
-       }
-       
-       #button2,
-       #button2::after {
-        box-sizing: border-box;
-       }
-       
-       #button2:active {
-        --border-width: 5px;
-       }
   }
   
 .text {
       font-size: 3em;
-      letter-spacing: 10px;
-      font-family: military font;
-      border-right: 5px solid ;
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
+      font-variation-settings: "slnt" 0;
       width: 100%;
+      margin-bottom: 40px;
       white-space: hidden;
       overflow: hidden;
       animation: 
                 typing 2s steps(24), 
                 cursor .4s step-end infinite alternate;
-  }
-  @keyframes cursor {
-    50% {border-color: transparent }
-  }
-  @keyframes typing {
-    from {width: 0;}
-    
   }
   
   p {
@@ -345,6 +286,83 @@ body {
       font-family: "Orbitron", sans-serif;
   }
   
+     
+
+  #button2 {
+    --border-radius: 15px;
+    --border-width: 4px;
+    border-radius: 1em;
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+    padding: 1em 2em;
+    border: 0;
+    background-color: #212121;
+    font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    z-index: 2;
+   }
+   
+   #button2::after {
+    --m-i: linear-gradient(#000, #000);
+    --m-o: content-box, padding-box;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    border-radius: var(--border-radius);
+    background-image: conic-gradient(
+       #488cfb,
+       #29dbbc,
+       #ddf505,
+       #ff9f0e,
+       #e440bb,
+       #655adc,
+       #488cfb
+     );
+    -webkit-mask-image: var(--m-i), var(--m-i);
+    mask-image: var(--m-i), var(--m-i);
+    -webkit-mask-origin: var(--m-o);
+    mask-origin: var(--m-o);
+    -webkit-mask-clip: var(--m-o);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    filter: hue-rotate(0);
+    animation: rotate-hue linear 500ms infinite;
+    animation-play-state: paused;
+   }
+   
+   #button2:hover::after {
+    animation-play-state: running;
+   }
+   
+   @keyframes rotate-hue {
+    to {
+     filter: hue-rotate(1turn);
+    }
+   }
+   
+   #button2,
+   #button2::after {
+    box-sizing: border-box;
+   }
+   
+   #button2:active {
+    --border-width: 5px;
+   }
+   
+   @keyframes cursor {
+    50% {border-color: transparent }
+  }
+  @keyframes typing {
+    from {width: 0;}
+    
+  }
   /* Media Queries */
   @media (max-width: 1200px) {
       
@@ -388,8 +406,8 @@ body {
 }
 
 .content1 {
-  position: absolute;
-  top: 50%;
+  position: relative;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -404,6 +422,24 @@ p {
   font-size: 1.5em;
 }
 
+.image-container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  perspective: 500px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
 /*About us starts*/  
 .row1 {
   
@@ -417,6 +453,8 @@ p {
 }
 
 .row {
+  display: flex;
+  justify-content: center;
   max-height: 500px;
   width: 100%;
   border-radius:8px ;
@@ -549,7 +587,7 @@ p {
   .row1 {
     padding-top:10px ;
     display: block;
-    height: 70vh;
+    height: 73vh;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -559,7 +597,8 @@ p {
  .row1 .back-container .row {
   
     max-width: 340px;
-    max-height: 90%;
+    max-height: 84%;
+    margin-bottom: 10px;
     border-radius:8px ;
     background-color: #EFF3F7;
     display: grid;
@@ -568,7 +607,7 @@ p {
     overflow: scroll;
     border-bottom: hidden;
     margin: 0px;
-    padding:  0.5rem 1.4rem;
+    padding:  0.5rem 1rem;
   }
   .back-container .heading-container {
     margin-bottom: 0px;
@@ -737,7 +776,7 @@ p {
     position: relative;
       max-width: 100%;
       
-      margin-top: 20px;
+      margin: 20px 0px;
       padding-bottom: 0px;
       background-color: #ffffff;
       /* background-image: url(./clints/clintsBG.jpg);*/
@@ -808,14 +847,21 @@ p {
   .container {
     align-content: center;
     align-items: center;
-      padding:0 60px ;
+    margin-top: 30px;
+
+      padding:40px 60px ;
       display: flex;
       background-color: #EFF3F7;
       flex-direction: column;
       justify-content: flex-start;
       height: 92vh; /* Full viewport height */
   }
-
+ .container2{
+  margin-top: 30px;
+ }
+ .image-info-container{
+  margin-top: 60px;
+ }
 .image-info-container3 {
   height: fit-content;
     display: flex;
@@ -825,11 +871,12 @@ p {
 }
 
 .image-section {
+    padding-top: 30px;
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 80vh; /* Fixed height for image section */
+    height: 64vh; /* Fixed height for image section */
     transition: background-color 0.3s ease; /* Added transition effect */
     
 }
@@ -841,6 +888,7 @@ p {
     transition: opacity 0.5s ease; /* Added transition effect */
 }
 #displayImage {
+ 
   height: 72%;
 }
 .info-section {
@@ -893,11 +941,12 @@ p {
     align-content: center;
     align-items: center;
     padding: 0px 10px ;
+    margin: 20px 0px;
     display: flex;
     background-color: #EFF3F7;
     flex-direction: column;
     justify-content: center;
-    height: 100vh; /* Full viewport height */
+    height: 118vh; /* Full viewport height */
   }
  .image-info-container1 .image-info-container3 {
     height: fit-content;
@@ -1197,12 +1246,14 @@ height: 100%;
   justify-items: center;
   font-family: 'Poppins', sans-serif;
 }
-
-.item video {
+.item{
+  width:600px;
+}
+.item iframe {
   width: 100%;
-  height: 101%;
+  height: 100%;
   border-radius: 10px;
-  pointer-events: auto;
+  
 }
 
 main#carousel {
@@ -1223,7 +1274,7 @@ main#carousel {
 }
 
 div.item {
-  
+  pointer-events: auto;
   text-align: center;
   padding: 10px;
   border: 3px solid #fff;
@@ -1231,7 +1282,7 @@ div.item {
   background-color: #fff;
   position: absolute;
   width: 35 0px;
-  height: 280px;
+  height: 320px;
   background-color: #fff;
   --r: calc(var(--position) - var(--offset));
   --abs: max(calc(var(--r) * -1), var(--r));
@@ -1375,14 +1426,23 @@ input:nth-of-type(10):checked ~ main#carousel {
   justify-items: center;
   font-family: 'Poppins', sans-serif;
 }
-
-.item video {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  pointer-events: auto;
+.item{
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+ 
 }
 
+.item iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+}
 main#carousel {
   grid-row: 1 / 2;
   grid-column: 1 / 13;
@@ -1397,11 +1457,11 @@ main#carousel {
   --items: 10;
   --middle: 5;
   --position: 1;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 div.item {
-  
+  pointer-events: auto;
   text-align: center;
   padding: 10px;
   border: 3px solid #fff;
@@ -1567,8 +1627,9 @@ div.item {
 }
 
 .address, .email, .phone {
+
   text-align: center;
-  padding: 20px 0;
+ 
   color: #444;
 
   h3 {
@@ -1583,7 +1644,7 @@ div.item {
   }
 }
  .location{
-  margin-left: 30%;
+  margin-left: 40%;
   margin-bottom: 10%;
   width: 35.8px;
   height: 35.8px;
@@ -1599,7 +1660,7 @@ div.item {
   inset: 0;
   border-radius: 50% 50% 0 50%;
   background: #0000;
-  background-image: radial-gradient(circle 11.2px at 50% 50%,#0000 94%, #ff4747);
+  background-image: radial-gradient(circle 11.2px at 50% 50%,#0000 94%, #3ea4e9);
 }
 
 .location:after {
@@ -1607,6 +1668,60 @@ div.item {
   transform: perspective(336px) translateZ(0px);
 }
 
+.button4 {
+  margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: none;
+  position: relative;
+  background-color: #30C04F;
+  cursor: pointer;
+}
+.button4:before,
+.button4::after{
+  
+ content: "";
+ position: absolute;
+ inset: 0;
+ border-radius: 50%;
+ background: #0000;
+ background-image: radial-gradient(circle 18.2px at 50% 50%,#0000 94%, #60e93e);
+
+}
+
+.button4::after {
+  animation: pulse-ytk0dhmd 1s infinite;
+  transform: perspective(336px) translateZ(0px);
+}
+
+
+.button5{
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+.button5:before,
+.button5::after{
+  margin-left: 10px;
+ content: "";
+ position: absolute;
+ inset: 0;
+ border-radius: 50%;
+ background: #0000;
+ background-image: radial-gradient(circle 17.2px at 50% 50%,#0000 94%, #e9993e);
+
+}
+
+.button5::after {
+  animation: pulse-ytk0dhmd 1s infinite;
+  transform: perspective(336px) translateZ(0px);
+}
 @keyframes pulse-ytk0dhmd {
   to {
     transform: perspective(336px) translateZ(168px);
@@ -1717,8 +1832,8 @@ form {
 /* Layout Stuff */
 .contact-container {
   background: #fff;
-  height: 100vh;
-  width: 99.4vw;
+  height: 115vh;
+  width: 100vw;
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1777,43 +1892,67 @@ form {
     align-items: center;
   }
   .contact-form-container {
-    border-radius: 10px;
-    width: 390px;
+    width: 375px;
     display: grid;
-    grid-template-columns: 0.8fr 0.8fr 0.8fr;
-    grid-template-rows: 0.5fr 0.5fr 0.5fr 2fr;
+    grid-template-columns: 0.8fr  0.8fr 0.8fr;
+    grid-template-rows: 0.2fr 0.5fr 2fr;
     grid-template-areas: 
-      "contact-us contact-us contact-us"
       "header header header" 
-      "address phone email" 
+      "address email phone" 
       "contact-form contact-form contact-form";
   }
+
+
+.address, .email, .phone {
+  text-align: center;
+  padding: 10px 0px;
+  color: #444;
+
+  h3 {
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+
+  i {
+    color: #F8B7D8;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+}
   .contact-form-container {
     background: #EFF3F7;
     font-family: 'Lato', sans-serif;
     margin-top: 20px;
   }
   .header {
+    font-family: "Josefin Sans", sans-serif;
     text-align: center;
     padding: 20px 0;
     color: #444;
+    height: 50px;
   
     h1 {
       font-weight: bold;
-      font-size: small;
+      font-size: medium;
     }
   
     h2 {
-      
-      font-weight: 200;
+      font-size: 30px;
+      font-weight: normal;
     }
   }
   
+  .contact-form {
+    width: 380px;
+  padding-bottom: 20px;
+  border-color: #000;
+  margin-bottom: 40px;
+}
 
   form {
     position: relative;
-    width: 350px;
-    margin-left: 10px;
+    width: 340px;
+    margin-left: 6px;
     padding: 10px;
     box-shadow: 0 0 5px rgba(0,0,0,.1);
     background: white;
@@ -1906,6 +2045,65 @@ form {
   
 }
 
+/* style.css */
+
+.button6 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* Place the button 20px from the bottom */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.button6:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(181, 160, 255);
+  align-items: center;
+}
+
+.button6:hover .svgIcon {
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.button6::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back to Top";
+  color: white;
+  font-size: 0px;
+}
+
+.button6:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  transition-duration: 0.3s;
+}
+
 /* Side bar scroller */
 ::-webkit-scrollbar {
   width: 10px;
@@ -1919,3 +2117,5 @@ form {
   background: linear-gradient(#0a1d79, #c0797b);
   border-radius: 10px;
   }
+
+ 
