@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
       mobileMenu.classList.toggle('show');
     });
 
-    mobileMenu.addEventListener('click', function() {
+    mobileMenu.addEventListener('mouseleave', function() {
       mobileMenu.classList.remove('show');
     });
 
