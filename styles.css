@@ -1859,7 +1859,7 @@ form {
 /* Layout Stuff */
 .contact-container {
   background: #fff;
-  height: 100vh;
+  height: 120vh;
   width: 99.3vw;
   position: relative;
   background-size: cover;
@@ -1872,7 +1872,7 @@ form {
 .contact-form-container {
   
   width: 800px;
-  height: 650px;;
+  height: 650px;
   display: grid;
   grid-template-columns: 0.8fr 0.8fr 0.8fr 0.8fr;
   grid-template-rows: 0.5fr 0.5fr 2fr;
@@ -2288,6 +2288,47 @@ form {
   transition-duration: 0.3s;
 }
 
+@media screen(max-width:480px) {
+
+  
+.button6 {
+  width: 30px;
+  height: 30px;
+  font-weight: 400;
+  
+}
+
+.svgIcon {
+  width: 8px;
+  transition-duration: 0.3s;
+}
+
+.button6:hover {
+  width: 90px;
+}
+ 
+  
+}
+
+/* all rights css*/
+.rights-reserved {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+@media screen (max-width:480px) {
+  .rights-reserved {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 7px;
+    color: #666;
+  }
+  
+}
 /* Side bar scroller */
 ::-webkit-scrollbar {
   width: 10px;
