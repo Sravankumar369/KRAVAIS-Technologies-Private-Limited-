@@ -12,15 +12,19 @@ body{
     background-color: #ffffff; /* Set background color */
     color: #333; /* Set text color */
 }
-.wrapper1,
-.content2 {
-  position: relative;
-  width: 100%;
-  z-index: 1;
+
+.section1{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
 }
 
-.content2 {
-  overflow-x: hidden;
+.section2{
+  width: 100vw;
+  background-color: #EFF3F7;
+  display: flex;
+  justify-content: center;
 }
 /* First page starts */
 .main_container {
@@ -470,7 +474,6 @@ p {
   font-size: 40px;
   font-weight: normal;
   color: #383f47;
-
 }
 .row .imgWrapper {
   display: inline;
@@ -592,7 +595,7 @@ p {
   
   
  .row1 .back-container .row {
-  
+    position: relative;
     max-width: 342px;
     max-height: 84%;
     margin-bottom: 10px;
@@ -936,6 +939,7 @@ p {
     }
 }
 /*Media Queries Phones */
+
 @media (max-width: 480px) {
   .container {
     align-content: center;
@@ -946,7 +950,7 @@ p {
     background-color: #EFF3F7;
     flex-direction: column;
     justify-content: center;
-    height: 135vh; /* Full viewport height */
+    height: 125vh; /* Full viewport height */
   }
  .image-info-container1 .image-info-container3 {
     height: fit-content;
@@ -1034,7 +1038,7 @@ height: 100%;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 20px 11px 20px;
   margin-bottom: 40px;
   
 }
@@ -1247,14 +1251,17 @@ height: 100%;
   align-items: center;
   justify-items: center;
   font-family: 'Poppins', sans-serif;
+  
 }
 .item{
   width:600px;
+  cursor: pointer;
 }
 .item iframe {
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  
   
 }
 
@@ -1273,6 +1280,7 @@ main#carousel {
   --middle: 5;
   --position: 1;
   pointer-events: none;
+  
 }
 
 div.item {
@@ -1291,6 +1299,7 @@ div.item {
   transition: all 0.25s linear;
   transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
   z-index: calc((var(--position) - var(--abs)));
+  
 }
 
 div.item:nth-of-type(1) {
@@ -1859,7 +1868,7 @@ form {
 /* Layout Stuff */
 .contact-container {
   background: #fff;
-  height: 122vh;
+  height: 120vh;
   width: 99.3vw;
   position: relative;
   background-size: cover;
@@ -1929,7 +1938,7 @@ form {
   .contact-container {
     
     background: #fff;
-    height: 115vh;
+    height: 120vh;
     width: 375px;
     position: relative;
     background-size: cover;
